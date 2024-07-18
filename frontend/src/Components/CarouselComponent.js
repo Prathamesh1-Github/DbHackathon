@@ -1,4 +1,6 @@
 import Carousel from 'react-bootstrap/Carousel';
+import './Styles/PatientHome.css'
+import './Styles/Carousel.css'
 
 function CarouselComponent() {
     return (

@@ -3,14 +3,13 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import axios from 'axios';
 
-import '../Styles/Map.css'
-
 const MapComponent = () => {
     const mapRef = useRef(null);
     const boundaryCircleRef = useRef(null);
     const routePolylineRef = useRef(null);
     const [currentPosition, setCurrentPosition] = useState(null);
     const [radius] = useState(2000);
+    const [alertTriggered, setAlertTriggered] = useState(false);
 
     const targetLat = 18.5018;
     const targetLon = 73.8636;
@@ -108,7 +107,7 @@ const MapComponent = () => {
                 let routeIndex = 0;
 
                 const animateMarker = () => {
-                    if (routeIndex < coordinates.length) {
+                    if (routeIndex < coordinates.length && !alertTriggered) {
                         animatedMarker.setLatLng(coordinates[routeIndex]);
                         routeIndex++;
 
@@ -117,9 +116,11 @@ const MapComponent = () => {
                         if (distanceToCenter > radius) {
                             boundaryCircleRef.current.setStyle({ color: 'red' });
                             alert('Marker has crossed the boundary!');
+                            sendSmsAlert('The person has left the geofenced area!');
+                            setAlertTriggered(true);
+                        } else {
+                            setTimeout(animateMarker, 200);
                         }
-
-                        setTimeout(animateMarker, 200);
                     }
                 };
 
@@ -128,6 +129,14 @@ const MapComponent = () => {
                 console.error("Error fetching route data: ", error);
                 alert("Failed to fetch route data.");
             }
+        }
+    };
+
+    const sendSmsAlert = async () => {
+        try {
+            await axios.post('http://localhost:3001/send-alert');
+        } catch (error) {
+            console.error('Error sending SMS:', error);
         }
     };
 

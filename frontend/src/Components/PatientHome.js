@@ -1,6 +1,6 @@
 import React from 'react';
 import CarouselComponent from './CarouselComponent';
-import './PatientHome.css';
+import './Styles/PatientHome.css';
 
 function PatientHome() {
   const btnArray = [
