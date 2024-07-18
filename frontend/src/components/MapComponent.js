@@ -3,6 +3,8 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import axios from 'axios';
 
+import '../Styles/Map.css'
+
 const MapComponent = () => {
     const mapRef = useRef(null);
     const boundaryCircleRef = useRef(null);
