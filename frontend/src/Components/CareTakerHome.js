@@ -23,13 +23,14 @@ const CareTakerHome = () => {
     const navigate = useNavigate()
 
     const options1 = [
-        { label: 'Patient Details', path: '/profile', bgColor: '#e3f2fd', textColor: '#1e88e5' },
+        { label: 'Patient Details', path: '/patient-details', bgColor: '#e3f2fd', textColor: '#1e88e5' },
         { label: 'Patient Location', path: '/map', bgColor: '#e3f2fd', textColor: '#1e88e5' },
         { label: 'Medical History', path: '/medical-history', bgColor: '#e3f2fd', textColor: '#1e88e5' },
         { label: 'Daily CheckIn', path: '/daily-checkin', bgColor: '#e3f2fd', textColor: '#1e88e5' },
     ];
 
     const options2 = [
+        { label: 'Watch and Learn', path: '/dementiatypes', bgColor: '#fce4ec', textColor: '#d81b60' },
         { label: 'Watch and Learn', path: '/dementiatypes', bgColor: '#fce4ec', textColor: '#d81b60' },
         { label: 'Comics', path: '/comics', bgColor: '#fce4ec', textColor: '#d81b60' },
     ];

@@ -19,7 +19,7 @@ const HelpSection = () => {
 
       try {
         // Construct the URL with query parameters
-        const url = new URL("http://localhost:4000/summarize");
+        const url = new URL("https://chatbot-dtfm.onrender.com/summarize");
         url.searchParams.append("text", message);
 
         const initialresponse = await fetch(url.toString(), {
@@ -96,7 +96,7 @@ const HelpSection = () => {
       const payload = { scriptText: omkarpayload.query };
 
       try {
-        const response = await fetch("http://localhost:4000/generate-video", {
+        const response = await fetch("https://chatbot-dtfm.onrender.com/generate-video", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
