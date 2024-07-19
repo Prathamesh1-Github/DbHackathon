@@ -6,6 +6,10 @@ import Register from './Components/Register'
 import MapComponent from './Components/MapComponent'
 import Calendar from './Components/Calender'
 import Corousel from './Components/Corousel'
+import VideoCall from './Components/VideoCall'
+import RoomPage from './Components/RoomPage'
+import DementiaDiaries from './Components/DementiaDiaries'
+import ProfilePage from './Components/ProfilePage'
 
 const App = () => {
     return(
@@ -18,6 +22,12 @@ const App = () => {
                     <Route path='/map' exact element={<MapComponent/>}></Route>
                     <Route path='/calender' exact element={<Calendar/>}></Route>
                     <Route path='/corousel' exact element={<Corousel/>}></Route>
+                    <Route path="/videocall" exact element={<VideoCall/>}></Route>
+                    <Route path="/videocall/:id" exact element={<RoomPage/>}></Route>
+                    <Route path="/profile" exact element={<ProfilePage/>}></Route>
+                    <Route path="/dementiatypes" element={<DementiaTypes />} />
+                    <Route path="/dementiadiaries" element={<DementiaDiaries />} />
+                    <Route path="/helpsection" element={<HelpSection />} />
                 </Routes>
             </BrowserRouter>
         </div>
