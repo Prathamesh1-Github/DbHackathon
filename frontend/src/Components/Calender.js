@@ -1,18 +1,20 @@
-    import { useState } from "react";
-    import FullCalendar, { formatDate } from "@fullcalendar/react";
-    import dayGridPlugin from "@fullcalendar/daygrid";
-    import timeGridPlugin from "@fullcalendar/timegrid";
-    import interactionPlugin from "@fullcalendar/interaction";
-    import listPlugin from "@fullcalendar/list";
-    import {
-        Box,
-        List,
-        ListItem,
-        ListItemText,
-        Typography,
-        useTheme,
-    } from "@mui/material";
-    import { tokens } from "../theme.js"
+import { useState } from "react";
+import FullCalendar, { formatDate } from "@fullcalendar/react";
+import dayGridPlugin from "@fullcalendar/daygrid";
+import timeGridPlugin from "@fullcalendar/timegrid";
+import interactionPlugin from "@fullcalendar/interaction";
+import listPlugin from "@fullcalendar/list";
+import {
+    Box,
+    List,
+    ListItem,
+    ListItemText,
+    Typography,
+    useTheme,
+} from "@mui/material";
+import { tokens } from "../theme.js"
+
+import Navbar from "./Navbar.js";
 
     const Calendar = () => {
     const theme = useTheme();
@@ -48,6 +50,8 @@
     return (
         <Box m="20px">
         {/* <Header title="Calendar" subtitle="Full Calendar Interactive Page" /> */}
+
+        <Navbar />
 
         <Box display="flex" justifyContent="space-between">
             {/* CALENDAR SIDEBAR */}
