@@ -11,6 +11,7 @@ import Start from './Components/Start'
 import CareTakerHome from './Components/CareTakerHome'
 
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
+import VideoPlayer from './Components/VideoPlayer';
 
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
                     <Route path='/map' exact element={<MapComponent/>}></Route>
                     <Route path='/calender' exact element={<Calendar/>}></Route>
                     <Route path='/corousel' exact element={<Corousel/>}></Route>
+                    <Route path='/comics' exact element={<VideoPlayer/>}></Route>
                 </Routes>
             </BrowserRouter>
         </div>
