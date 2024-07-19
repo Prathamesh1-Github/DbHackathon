@@ -31,6 +31,7 @@ const CareTakerHome = () => {
 
     const options2 = [
         { label: 'Watch and Learn', path: '/dementiatypes', bgColor: '#fce4ec', textColor: '#d81b60' },
+        { label: 'Watch and Learn', path: '/dementiatypes', bgColor: '#fce4ec', textColor: '#d81b60' },
         { label: 'Comics', path: '/comics', bgColor: '#fce4ec', textColor: '#d81b60' },
     ];
 
