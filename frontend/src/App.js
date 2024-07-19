@@ -1,5 +1,6 @@
 import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import PatientHome from './Components/PatientHome'
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import CareTakersInfo from './Components/CareTakersInfo'
 import Register from './Components/Register'
@@ -9,6 +10,8 @@ import Corousel from './Components/Corousel'
 import Start from './Components/Start'
 import CareTakerHome from './Components/CareTakerHome'
 
+import { Route, BrowserRouter, Routes } from 'react-router-dom';
+
 
 const App = () => {
     return(
@@ -16,6 +19,7 @@ const App = () => {
             <BrowserRouter>
                 <Routes>
                     <Route path='/' exact element={<Start/>}></Route>
+                    <Route path='/patient' exact element={<PatientHome/>}></Route>
                     <Route path='/caretaker' exact element={<CareTakerHome/>}></Route>
                     <Route path='/caretaker-register' exact element={<CareTakersInfo/>}></Route>
                     <Route path='/register' exact element={<Register/>}></Route>
@@ -29,4 +33,3 @@ const App = () => {
 }
 
 export default App
-

@@ -41,7 +41,6 @@ function Start() {
                 alignItems: 'center', 
                 height: '100vh', 
                 margin: 0, 
-                backgroundColor: '#f5f5f5' 
             }}>
                 <Paper elevation={5} style={{ 
                     width: '90%', 
