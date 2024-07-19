@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./HelpSection.css";
+import "../Styles/HelpSection.css";
 
 const HelpSection = () => {
   const [message, setMessage] = useState("");

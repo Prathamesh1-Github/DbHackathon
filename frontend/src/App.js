@@ -13,6 +13,8 @@ import VideoCall from './Components/VideoCall'
 import RoomPage from './Components/RoomPage'
 import DementiaDiaries from './Components/DementiaDiaries'
 import ProfilePage from './Components/ProfilePage'
+import HelpSection from "./Components/HelpSection"
+import DementiaTypes from "./Components/DementiaTypes"
 
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 

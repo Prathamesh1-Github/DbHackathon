@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import "./DementiaDiaries.css";
+import "../Styles/DementiaDiaries.css";
 
 const testimonials = [
   {
     text: "When my mother was diagnosed with dementia, I felt lost and overwhelmed. Joining a support group and hearing others' stories made me realize I'm not alone. We've had tough days, but the moments of joy, like when she recognized an old song, make it all worth it.",
     name: "Jane",
     title: "Author",
-    img: "https://user-images.githubusercontent.com/13468728/234031693-6bbaba7d-632c-4d7d-965f-75a76a549ce2.jpg",
+    img: "https://github.com/ecemgo/ecemgo/assets/13468728/55116c98-5f9a-4b0a-9fdb-4911b52d5ef3",
   },
   {
     text: "My dad was my hero, and watching dementia change him was heartbreaking. But through the tough times, I found new ways to connect with him. Simple things, like sharing old family photos, brought smiles and sparked memories.",
@@ -24,7 +24,7 @@ const testimonials = [
     text: "I found solace in connecting with others in similar situations. Sharing our struggles and triumphs reminded me that we are not alone. The community became my extended family, offering advice, support, and understanding.",
     name: "Sarah",
     title: "Zara Inc.",
-    img: "https://github.com/ecemgo/ecemgo/assets/13468728/55116c98-5f9a-4b0a-9fdb-4911b52d5ef3",
+    img: "https://user-images.githubusercontent.com/13468728/234031693-6bbaba7d-632c-4d7d-965f-75a76a549ce2.jpg",
   },
 ];
 

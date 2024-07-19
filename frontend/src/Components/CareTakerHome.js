@@ -3,6 +3,7 @@ import "../Styles/HomePage.css";
 import FeaturesImage1 from "../Assets/Images/startimage.png";
 import FeaturesImage2 from "../Assets/Images/startimage.png";
 import FeaturesImage3 from "../Assets/Images/startimage.png";
+import { useNavigate } from 'react-router-dom';
 import { Button } from "@mui/material";
 import NavigationDialog from "./NavigationDialog"; // Import the dialog component
 
@@ -19,21 +20,23 @@ const CareTakerHome = () => {
         setDialogOpen(false);
     };
 
+    const navigate = useNavigate()
+
     const options1 = [
-        { label: 'Assigned Tasks', path: '/tasks', bgColor: '#e3f2fd', textColor: '#1e88e5' },
+        { label: 'Patient Details', path: '/profile', bgColor: '#e3f2fd', textColor: '#1e88e5' },
         { label: 'Patient Location', path: '/map', bgColor: '#e3f2fd', textColor: '#1e88e5' },
         { label: 'Medical History', path: '/medical-history', bgColor: '#e3f2fd', textColor: '#1e88e5' },
         { label: 'Daily CheckIn', path: '/daily-checkin', bgColor: '#e3f2fd', textColor: '#1e88e5' },
     ];
 
     const options2 = [
-        { label: 'Watch and Learn', path: '/watch-learn', bgColor: '#fce4ec', textColor: '#d81b60' },
+        { label: 'Watch and Learn', path: '/dementiatypes', bgColor: '#fce4ec', textColor: '#d81b60' },
         { label: 'Comics', path: '/comics', bgColor: '#fce4ec', textColor: '#d81b60' },
     ];
 
-    const options3 = [
-        { label: 'All Stories', path: '/stories', bgColor: '#e1f5fe', textColor: '#0288d1' }
-    ];
+    function redirect() {
+        navigate('/calender');
+    }
 
     return (
         <div className="body_Homepage">
@@ -43,7 +46,7 @@ const CareTakerHome = () => {
                         <Button>Ask Me</Button>
                     </div>
                     <div style={{width: '150px', backgroundColor: 'lavender', padding: '15px', borderBottomLeftRadius: '40px', display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
-                        <Button>Book Appointment</Button>
+                        <Button onClick={redirect}>Book Appointment</Button>
                     </div>
                 </div>
             </div>
@@ -60,21 +63,21 @@ const CareTakerHome = () => {
                     </div>
                 </div>
             </div>
-            <div className="feature-wrapper-right" style={{ marginLeft: '50px' }} onClick={() => handleDialogOpen(options2)}>
+            <div className="feature-wrapper" style={{ marginRight: '50px' }} onClick={() => handleDialogOpen(options2)}>
                 <div className="big-feature-section" >
                     <div className="big-feature-container" style={{  backgroundColor: 'lavender' }}>
-                        <div className="features-desc">
-                            <h4>More About Dimensia</h4>
-                            <p>Learn more about Dimensia.</p>
-                        </div>
                         <div className="feature-image">
-                            <img src={FeaturesImage2} alt="More About Dimensia"></img>
+                            <img src={FeaturesImage2} alt="More About Dementia"></img>
+                        </div>
+                        <div className="features-desc">
+                            <h4>More About Dementia</h4>
+                            <p>Learn more about Dementia.</p>
                         </div>
                     </div>
                 </div>
             </div>
-            <div className="feature-wrapper" style={{ marginRight: '50px' }} onClick={() => handleDialogOpen(options3)}>
-                <div className="big-feature-section" >
+            <div className="feature-wrapper" style={{ marginRight: '50px' }} onClick={() => navigate('/dementiadiaries')}>
+                <div className="big-feature-section">
                     <div className="big-feature-container" style={{  backgroundColor: '#edf6f9' }}>
                         <div className="feature-image">
                             <img src={FeaturesImage3} alt="Engage with the Community"></img>
