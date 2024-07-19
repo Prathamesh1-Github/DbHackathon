@@ -20,19 +20,20 @@ const CareTakerHome = () => {
     };
 
     const options1 = [
-        { label: 'Assigned Tasks', path: '/tasks', bgColor: '#e3f2fd', textColor: '#1e88e5' },
+        { label: 'Patient Details', path: '/patient-details', bgColor: '#e3f2fd', textColor: '#1e88e5' },
+        { label: 'Assigned Tasks', path: '/calender', bgColor: '#e3f2fd', textColor: '#1e88e5' },
         { label: 'Patient Location', path: '/map', bgColor: '#e3f2fd', textColor: '#1e88e5' },
         { label: 'Medical History', path: '/medical-history', bgColor: '#e3f2fd', textColor: '#1e88e5' },
         { label: 'Daily CheckIn', path: '/daily-checkin', bgColor: '#e3f2fd', textColor: '#1e88e5' },
     ];
 
     const options2 = [
-        { label: 'Watch and Learn', path: '/watch-learn', bgColor: '#fce4ec', textColor: '#d81b60' },
+        { label: 'Watch and Learn', path: '/dementiatypes', bgColor: '#fce4ec', textColor: '#d81b60' },
         { label: 'Comics', path: '/comics', bgColor: '#fce4ec', textColor: '#d81b60' },
     ];
 
     const options3 = [
-        { label: 'All Stories', path: '/stories', bgColor: '#e1f5fe', textColor: '#0288d1' }
+        { label: 'All Stories', path: '/dementiadiaries', bgColor: '#e1f5fe', textColor: '#0288d1' }
     ];
 
     return (

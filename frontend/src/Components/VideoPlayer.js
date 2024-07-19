@@ -1,26 +1,29 @@
 import React, { useState } from 'react';
 import "../Styles/VideoPlayer.css";
 
+import thumbnail1 from '../Assets/Images/thumnail1.jpg';
+import thumbnail2 from '../Assets/Images/thumnail2.jpg';
+import thumbnail3 from '../Assets/Images/thumnail3.jpg';
+
 const videos = [
   {
     id: 1,
-    title: "Cartoon Video 1",
-    thumbnail: "https://via.placeholder.com/150",
-    url: "/videos/vid.mp4"
+    title: "What is Dementia ?",
+    thumbnail: thumbnail1,
+    url: "/videos/vid2.mp4"
   },
   {
     id: 2,
-    title: "Cartoon Video 2",
-    thumbnail: "https://via.placeholder.com/150",
-    url: "/videos/video2.mp4"
+    title: "Emergency response scenerio",
+    thumbnail: thumbnail2,
+    url: "/videos/vid.mp4"
   },
   {
     id: 3,
-    title: "Cartoon Video 3",
-    thumbnail: "https://via.placeholder.com/150",
-    url: "/videos/video3.mp4"
+    title: "Precautions for Dementia",
+    thumbnail: thumbnail3,
+    url: "/videos/vid2.mp4"
   },
-  // Add more video objects here
 ];
 
 function VideoPlayer() {
@@ -29,7 +32,7 @@ function VideoPlayer() {
   return (
     <div className="video-player-container">
       <div className="video-section">
-        <video controls className="video-frame">
+        <video key={selectedVideo.url} controls className="video-frame">
           <source src={selectedVideo.url} type="video/mp4" />
           Your browser does not support the video tag.
         </video>

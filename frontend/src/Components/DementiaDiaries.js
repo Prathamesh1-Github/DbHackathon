@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import "./DementiaDiaries.css";
+import "../Styles/DementiaDiaries.css";
 
 const testimonials = [
   {
@@ -28,7 +28,7 @@ const testimonials = [
   },
 ];
 
-const TestimonialsSlider = () => {
+const DementiaDiaries = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const slideRowRef = useRef(null);
   const mainRef = useRef(null);
@@ -60,36 +60,38 @@ const TestimonialsSlider = () => {
   }, []);
 
   return (
-    <main id="sagarka-main" ref={mainRef}>
-      <div className="sagarka-slider">
-        <div className="sagarka-slide-row" ref={slideRowRef}>
-          {testimonials.map((testimonial, index) => (
-            <div className="sagarka-slide-col" key={index}>
-              <div className="sagarka-content">
-                <p>{testimonial.text}</p>
-                <h2>{testimonial.name}</h2>
-                <p>{testimonial.title}</p>
+    <div className="parent-container">
+      <main id="sagarka-main" ref={mainRef}>
+        <div className="sagarka-slider">
+          <div className="sagarka-slide-row" ref={slideRowRef}>
+            {testimonials.map((testimonial, index) => (
+              <div className="sagarka-slide-col" key={index}>
+                <div className="sagarka-content">
+                  <p>{testimonial.text}</p>
+                  <h2>{testimonial.name}</h2>
+                  <p>{testimonial.title}</p>
+                </div>
+                <div className="sagarka-hero">
+                  <img src={testimonial.img} alt={testimonial.name} />
+                </div>
               </div>
-              <div className="sagarka-hero">
-                <img src={testimonial.img} alt={testimonial.name} />
-              </div>
-            </div>
+            ))}
+          </div>
+        </div>
+        <div className="sagarka-indicator">
+          {testimonials.map((_, index) => (
+            <span
+              key={index}
+              className={`sagarka-btn ${
+                index === currentIndex ? "sagarka-active" : ""
+              }`}
+              onClick={() => setCurrentIndex(index)}
+            ></span>
           ))}
         </div>
-      </div>
-      <div className="sagarka-indicator">
-        {testimonials.map((_, index) => (
-          <span
-            key={index}
-            className={`sagarka-btn ${
-              index === currentIndex ? "sagarka-active" : ""
-            }`}
-            onClick={() => setCurrentIndex(index)}
-          ></span>
-        ))}
-      </div>
-    </main>
+      </main>
+    </div>
   );
 };
 
-export default TestimonialsSlider;
+export default DementiaDiaries;

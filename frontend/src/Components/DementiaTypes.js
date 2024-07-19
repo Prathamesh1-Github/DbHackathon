@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import "./DementiaTypes.css";
+import "../Styles/DementiaTypes.css";
 
 const faqData = [
   {
@@ -95,7 +95,7 @@ const faqData = [
   },
 ];
 
-const Faqs = () => {
+const DementiaTypes = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [childMode, setChildMode] = useState(false);
   const videoRefs = useRef([]);
@@ -243,4 +243,4 @@ const Faqs = () => {
   );
 };
 
-export default Faqs;
+export default DementiaTypes;

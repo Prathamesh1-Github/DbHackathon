@@ -13,6 +13,8 @@ import VideoCall from './Components/VideoCall'
 import RoomPage from './Components/RoomPage'
 import DementiaDiaries from './Components/DementiaDiaries'
 import ProfilePage from './Components/ProfilePage'
+import DementiaTypes from './Components/DementiaTypes';
+import HelpSection from './Components/HelpSection';
 
 import { Route, BrowserRouter, Routes } from 'react-router-dom';
 import VideoPlayer from './Components/VideoPlayer';
@@ -33,7 +35,7 @@ const App = () => {
                     <Route path='/corousel' exact element={<Corousel/>}></Route>
                     <Route path="/videocall" exact element={<VideoCall/>}></Route>
                     <Route path="/videocall/:id" exact element={<RoomPage/>}></Route>
-                    <Route path="/profile" exact element={<ProfilePage/>}></Route>
+                    <Route path="/patient-details" exact element={<ProfilePage/>}></Route>
                     <Route path="/dementiatypes" element={<DementiaTypes />} />
                     <Route path="/dementiadiaries" element={<DementiaDiaries />} />
                     <Route path="/helpsection" element={<HelpSection />} />
